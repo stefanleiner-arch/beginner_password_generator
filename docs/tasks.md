@@ -25,20 +25,20 @@ Goal: `generate_password()` works and all rules are tested. No terminal yet.
   - [x] two calls give different passwords
 - [x] tests in `tests/test_generator.py` for every rule above, including the edge cases (8, 128, 7, 129, only one kind on)
 - [x] run `pytest` → all pass
-- [ ] commit
+- [x] commit
 
 ## Phase 3 · Terminal (`cli.py`, `__main__.py`)
 Goal: `python -m password_generator` prints a password.
-- [ ] `argparse` options: `--length N`, `--no-lowercase`, `--no-uppercase`, `--no-digits`, `--no-symbols`
-- [ ] `main()`: build the settings, call the generator, print the password
-- [ ] errors: print the message, no password, exit with an error code
-- [ ] `__main__.py` calls `main()`
-- [ ] tests in `tests/test_cli.py`:
-  - [ ] no options → 16 characters
-  - [ ] `--length 20 --no-symbols` → 20 characters, no symbols
-  - [ ] `--length 5`, `--length abc`, all kinds off → error, no password
+- [x] `argparse` options: `--length N`, `--no-lowercase`, `--no-uppercase`, `--no-digits`, `--no-symbols`
+- [x] `main()`: build the settings, call the generator, print the password
+- [x] errors: print the message, no password, exit with an error code
+- [x] `__main__.py` calls `main()`
+- [x] tests in `tests/test_cli.py`:
+  - [x] no options → 16 characters
+  - [x] `--length 20 --no-symbols` → 20 characters, no symbols
+  - [x] `--length 5`, `--length abc`, all kinds off → error, no password
 - [ ] manual test: run a few commands and try one password on a real sign-up form
-- [ ] run `pytest` → all pass
+- [x] run `pytest` → all pass
 - [ ] commit
 
 ## Phase 4 · Finish
