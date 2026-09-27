@@ -13,18 +13,18 @@ Goal: `pytest` runs, even though there is nothing to test yet.
 
 ## Phase 2 · Password logic (`generator.py`)
 Goal: `generate_password()` works and all rules are tested. No terminal yet.
-- [ ] character sets as constants: `LOWERCASE`, `UPPERCASE`, `DIGITS`, `SYMBOLS`
-- [ ] `PasswordSettings` with the five fields and their defaults
-- [ ] `validate_settings(settings)` → raises `ValueError` for:
-  - [ ] length below 8 or above 128
-  - [ ] all kinds turned off
-- [ ] `generate_password(settings) -> str`, using `secrets`:
-  - [ ] correct length
-  - [ ] only characters from enabled kinds
-  - [ ] at least one of each enabled kind
-  - [ ] two calls give different passwords
-- [ ] tests in `tests/test_generator.py` for every rule above, including the edge cases (8, 128, 7, 129, only one kind on)
-- [ ] run `pytest` → all pass
+- [x] character sets as constants: `LOWERCASE`, `UPPERCASE`, `DIGITS`, `SYMBOLS`
+- [x] `PasswordSettings` with the five fields and their defaults
+- [x] `validate_settings(settings)` → raises `ValueError` for:
+  - [x] length below 8 or above 128
+  - [x] all kinds turned off
+- [x] `generate_password(settings) -> str`, using `secrets`:
+  - [x] correct length
+  - [x] only characters from enabled kinds
+  - [x] at least one of each enabled kind
+  - [x] two calls give different passwords
+- [x] tests in `tests/test_generator.py` for every rule above, including the edge cases (8, 128, 7, 129, only one kind on)
+- [x] run `pytest` → all pass
 - [ ] commit
 
 ## Phase 3 · Terminal (`cli.py`, `__main__.py`)
