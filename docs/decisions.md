@@ -17,3 +17,9 @@
 **Options:** copy automatically · print only
 **Decision:** print only.
 **Consequences:** standard library only, no Windows-specific code; I select and copy the password myself.
+
+## 2026-09-28 · Command-line options, not an interactive menu
+**Context:** the goal is "one short command gives a password".
+**Options:** command-line options (`--length 20 --no-symbols`) · interactive menu (the program asks questions one by one)
+**Decision:** command-line options, read with Python's built-in `argparse`.
+**Consequences:** fast once learned, and the defaults need no typing at all; `--help` lists the options. Same approach as the expense tracker.
