@@ -4,12 +4,12 @@ Built from the inside out: skeleton → logic → terminal. Each phase ends with
 
 ## Phase 1 · Skeleton
 Goal: `pytest` runs, even though there is nothing to test yet.
-- [ ] `pyproject.toml` with project name, Python version and pytest settings
-- [ ] virtual environment `.venv/` with pytest installed
-- [ ] `password_generator/__init__.py` (empty)
-- [ ] `tests/` folder with one tiny test that imports the package
-- [ ] run `pytest` → 1 test passes
-- [ ] commit
+- [x] `pyproject.toml` with project name, Python version and pytest settings
+- [x] virtual environment `.venv/` with pytest installed
+- [x] `password_generator/__init__.py` (empty)
+- [x] `tests/` folder with one tiny test that imports the package
+- [x] run `pytest` → 1 test passes
+- [x] commit
 
 ## Phase 2 · Password logic (`generator.py`)
 Goal: `generate_password()` works and all rules are tested. No terminal yet.
