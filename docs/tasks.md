@@ -37,16 +37,17 @@ Goal: `python -m password_generator` prints a password.
   - [x] no options → 16 characters
   - [x] `--length 20 --no-symbols` → 20 characters, no symbols
   - [x] `--length 5`, `--length abc`, all kinds off → error, no password
-- [ ] manual test: run a few commands and try one password on a real sign-up form
+- [x] manual test in the terminal: default, `--length 34`, `--length 120`, `--help`, `--length 3`
+- [x] optional: try one password on a real sign-up form
 - [x] run `pytest` → all pass
-- [ ] commit
+- [x] commit
 
 ## Phase 4 · Finish
-- [ ] README: "Usage" section with example commands; status → Done
-- [ ] CLAUDE.md: how to run the app and the tests
-- [ ] check that all docs match the code
-- [ ] `docs/notes/learning-notes.md`: what went well, what I learned
-- [ ] commit and push
+- [x] README: "Usage" section with example commands; status → Done
+- [x] CLAUDE.md: how to run the app and the tests
+- [x] check that all docs match the code
+- [x] `docs/notes/learning-notes password_generator.md`: what went well, what I learned
+- [x] commit and push
 
 ## Stretch goals (not now)
 - `--count N` to print several passwords at once

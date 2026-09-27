@@ -45,7 +45,7 @@ Options: `--length N`, `--no-lowercase`, `--no-uppercase`, `--no-digits`, `--no-
    2. fill the rest with random characters from all enabled kinds together
    3. shuffle, so the guaranteed characters aren't always at the start
    All random choices use `secrets`.
-7. `cli.py` prints the password, or, if there was a `ValueError`, prints the error message and exits with an error code.
+7. `cli.py` prints the password, or, if there was a `ValueError`, prints the error message (on stderr, the error channel) and exits with code 2, the same way `argparse` reports its own errors.
 
 ## Project layout
 ```text
@@ -61,6 +61,7 @@ password_generator/
 │   ├── cli.py
 │   └── generator.py
 └── tests/
+    ├── test_package.py
     ├── test_generator.py
     └── test_cli.py
 ```

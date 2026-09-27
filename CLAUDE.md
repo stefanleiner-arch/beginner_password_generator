@@ -57,3 +57,14 @@ When something fails: tell me what failed, explain the likely cause simply, inve
 - Before committing: summarize the changes and make sure tests pass.
 - Never push unless I ask.
 - Never force-push, delete branches or rewrite history without asking first.
+
+# This project
+
+A command-line password generator. See `README.md` and `docs/`.
+
+- Run the app: `.venv/Scripts/python -m password_generator [options]`
+- Run the tests: `.venv/Scripts/pytest`
+- `password_generator/generator.py` is pure logic: no printing, no input (see `docs/architecture.md`).
+- Randomness must come from `secrets`, never `random` (see `docs/decisions.md`).
+- Passwords are never saved to a file.
+- Standard library only for the app; pytest is the only extra tool, for tests.

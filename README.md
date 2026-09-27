@@ -17,23 +17,52 @@ A small command-line tool that creates strong, random passwords for me when I si
 - Syncing between devices, or accounts for other people.
 
 ## Requirements
-- [ ] Generate a password
+- [x] Generate a password
   - one command prints one password and nothing else
   - by default: 16 characters, using lowercase letters, uppercase letters, digits and symbols
   - running it twice gives two different passwords
   - uses a secure random source (Python's `secrets` module, not `random`)
-- [ ] Choose the length
+- [x] Choose the length
   - any whole number from 8 to 128
   - below 8 or above 128 → clear error, no password
   - not a whole number (`abc`, `12.5`) → clear error, no password
-- [ ] Choose the kinds of characters
+- [x] Choose the kinds of characters
   - each kind can be turned off: lowercase, uppercase, digits, symbols
   - a turned-off kind never appears in the password
   - every kind that is on appears at least once (many websites require this)
   - all kinds turned off → clear error, no password
-- [ ] Symbols
+- [x] Symbols
   - the symbol set is `!@#$%^&*-_=+?`
   - no quotes, spaces or backslashes, because some websites reject them or they cause trouble when pasting
 
+## Usage
+One-time setup (in the project folder):
+```text
+python -m venv .venv
+.venv/Scripts/python -m pip install pytest      (only needed for the tests)
+```
+
+Create a password:
+```text
+.venv/Scripts/python -m password_generator                       → 16 characters, all kinds
+.venv/Scripts/python -m password_generator --length 20           → 20 characters
+.venv/Scripts/python -m password_generator --no-symbols          → no symbols
+.venv/Scripts/python -m password_generator --length 12 --no-digits --no-symbols
+.venv/Scripts/python -m password_generator --help                → list all options
+```
+
+Run the tests:
+```text
+.venv/Scripts/pytest
+```
+
+For real passwords, run it in your own terminal, so the password only appears on your screen.
+
+## Documentation
+- [Data model](docs/data-model.md)
+- [Architecture](docs/architecture.md)
+- [Decisions](docs/decisions.md)
+- [Tasks](docs/tasks.md)
+
 ## Status
-Planning
+Done
